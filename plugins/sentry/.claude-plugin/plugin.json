@@ -1,0 +1,15 @@
+{
+  "name": "sentry",
+  "version": "1.0.0",
+  "description": "Sentry integration for Claude Code with issue analysis agent",
+  "author": {
+    "name": "Erhan Abay"
+  },
+  "keywords": ["sentry", "error-tracking", "debugging", "issue-analysis"],
+  "mcpServers": {
+    "sentry": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://mcp.sentry.dev/mcp"]
+    }
+  }
+}

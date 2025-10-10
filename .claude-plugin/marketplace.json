@@ -1,0 +1,16 @@
+{
+  "name": "eabay-tools",
+  "owner": {
+    "name": "Erhan Abay"
+  },
+  "plugins": [
+    {
+      "name": "sentry",
+      "source": "./plugins/sentry"
+    },
+    {
+      "name": "dev-essentials",
+      "source": "./plugins/dev-essentials"
+    }
+  ]
+}
