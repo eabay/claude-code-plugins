@@ -1,7 +1,7 @@
 {
   "name": "dev-essentials",
-  "version": "1.0.0",
-  "description": "Essential development workflow commands including smart commit messages and dependency management",
+  "version": "1.1.0",
+  "description": "Essential development workflow tools including smart commit messages (skill) and dependency management (command)",
   "author": {
     "name": "Erhan Abay"
   }

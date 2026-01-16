@@ -9,12 +9,16 @@ claude-code-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json          # Marketplace manifest
 └── plugins/
-    ├── dev-essentials/           # Essential development commands
+    ├── dev-essentials/           # Essential development workflows
     │   ├── .claude-plugin/
     │   │   └── plugin.json
-    │   └── commands/
-    │       ├── commit.md         # Smart commit message generation
-    │       └── update-deps.md    # Methodical dependency updates
+    │   ├── commands/
+    │   │   └── update-deps.md    # Methodical dependency updates
+    │   └── skills/
+    │       └── commit/           # Smart commit message generation
+    │           ├── SKILL.md
+    │           └── references/
+    │               └── git-commit-guide.md
     └── sentry/                   # Sentry error tracking integration
         ├── .claude-plugin/
         │   └── plugin.json
@@ -26,10 +30,12 @@ claude-code-plugins/
 
 ### dev-essentials
 
-Essential development workflow commands for common tasks.
+Essential development workflow tools for common tasks.
+
+**Skills:**
+- `commit` - Generate well-crafted commit messages following Git best practices
 
 **Commands:**
-- `/commit [context]` - Generate well-crafted commit messages following Git best practices
 - `/update-deps [context]` - Systematically update dependencies with safety checks
 
 **Installation:**
