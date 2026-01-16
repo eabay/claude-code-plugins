@@ -1,6 +1,26 @@
 ---
 name: issue-analyzer
-description: Use this agent when you need to investigate and resolve errors or issues reported in Sentry. This includes analyzing error details, stack traces, and patterns to identify root causes and propose solutions. The agent will work in plan mode, meaning it will analyze and propose solutions without making direct code changes. Examples:\n\n<example>\nContext: The user wants to investigate a Sentry error that's been occurring in production.\nuser: "There's a critical error in Sentry about database connections failing"\nassistant: "I'll use the issue-analyzer agent to investigate this error and propose a solution."\n<commentary>\nSince the user needs to analyze a Sentry issue and find a solution, use the Task tool to launch the issue-analyzer agent.\n</commentary>\n</example>\n\n<example>\nContext: The user needs help understanding recurring errors in their application.\nuser: "Can you look at the top errors in Sentry from the last 24 hours and suggest fixes?"\nassistant: "Let me launch the issue-analyzer agent to examine recent errors and provide solution recommendations."\n<commentary>\nThe user is asking for Sentry error analysis and solutions, so use the Task tool with the issue-analyzer agent.\n</commentary>\n</example>
+description: |
+  Use this agent when you need to investigate and resolve errors or issues reported in Sentry. This includes analyzing error details, stack traces, and patterns to identify root causes and propose solutions. The agent will work in plan mode, meaning it will analyze and propose solutions without making direct code changes.
+
+  <example>
+  Context: The user wants to investigate a Sentry error that's been occurring in production.
+  user: "There's a critical error in Sentry about database connections failing"
+  assistant: "I'll use the issue-analyzer agent to investigate this error and propose a solution."
+  <commentary>
+  Since the user needs to analyze a Sentry issue and find a solution, use the Task tool to launch the issue-analyzer agent.
+  </commentary>
+  </example>
+
+  <example>
+  Context: The user needs help understanding recurring errors in their application.
+  user: "Can you look at the top errors in Sentry from the last 24 hours and suggest fixes?"
+  assistant: "Let me launch the issue-analyzer agent to examine recent errors and provide solution recommendations."
+  <commentary>
+  The user is asking for Sentry error analysis and solutions, so use the Task tool with the issue-analyzer agent.
+  </commentary>
+  </example>
+model: inherit
 tools: Glob, Grep, Read, TodoWrite, WebSearch, mcp__sentry
 color: cyan
 ---
