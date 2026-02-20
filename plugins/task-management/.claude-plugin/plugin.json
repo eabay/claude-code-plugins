@@ -1,0 +1,9 @@
+{
+  "name": "task-management",
+  "version": "1.0.0",
+  "description": "Lightweight project task management using markdown files in a .tasks/ directory",
+  "author": {
+    "name": "Erhan Abay"
+  },
+  "keywords": ["tasks", "project-management", "markdown", "workflow"]
+}

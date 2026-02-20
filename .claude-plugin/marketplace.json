@@ -11,6 +11,10 @@
     {
       "name": "dev-essentials",
       "source": "./plugins/dev-essentials"
+    },
+    {
+      "name": "task-management",
+      "source": "./plugins/task-management"
     }
   ]
 }

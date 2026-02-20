@@ -19,11 +19,17 @@ claude-code-plugins/
     │           ├── SKILL.md
     │           └── references/
     │               └── git-commit-guide.md
-    └── sentry/                   # Sentry error tracking integration
+    ├── sentry/                   # Sentry error tracking integration
+    │   ├── .claude-plugin/
+    │   │   └── plugin.json
+    │   └── agents/
+    │       └── issue-analyzer.md # Sentry issue investigation agent
+    └── task-management/          # Markdown-based task tracking
         ├── .claude-plugin/
         │   └── plugin.json
-        └── agents/
-            └── issue-analyzer.md # Sentry issue investigation agent
+        └── skills/
+            └── task-management/
+                └── SKILL.md      # Task management skill
 ```
 
 ## Available Plugins
@@ -65,6 +71,19 @@ Sentry integration providing automated error investigation and analysis.
 **Requirements:**
 - Sentry MCP server configuration
 - Environment variables for Sentry API access (configured via MCP)
+
+### task-management
+
+Lightweight project task management using markdown files in a `.tasks/` directory.
+
+**Skills:**
+- `task-management` - Create, update, complete, and list project tasks as markdown files with YAML frontmatter
+
+**Installation:**
+```bash
+/plugin marketplace add eabay/claude-code-plugins
+/plugin install task-management@eabay-tools
+```
 
 ## Development Guidelines
 
@@ -294,6 +313,7 @@ Then install individual plugins:
 ```bash
 /plugin install dev-essentials@eabay-tools
 /plugin install sentry@eabay-tools
+/plugin install task-management@eabay-tools
 ```
 
 ## Environment Variables
